@@ -1,5 +1,5 @@
 /**
- * Program Name: 	SqlBuilder.java
+ * Program Name: 		SqlBuilder.java
  * Coder: 			Joseph Ryu
  * Date: 			Jul 14, 2017
  * Purpose:			Builds SQL string that can be used by a statement object
