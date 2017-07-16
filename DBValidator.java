@@ -23,7 +23,7 @@ public class DBValidator
 	
 	/*
 	 * Method Name: getColumns
-	 * Purpose:		Retrieves tableColumns
+	 * Purpose:	Retrieves tableColumns
 	 */
 	public List<BaseDataColumn> getColumns() {
 		return tableColumns;
@@ -31,7 +31,7 @@ public class DBValidator
 	
 	/*
 	 * Method Name: addColumn
-	 * Purpose:		Adds a column to the tableColumns vector
+	 * Purpose:	Adds a column to the tableColumns vector
 	 */
 	public DBValidator addColumn(BaseDataColumn column) {
 		tableColumns.add(column);
@@ -40,7 +40,7 @@ public class DBValidator
 	
 	/*
 	 * Method Name: addColumn
-	 * Purpose:		Adds multiple columns to the tableColumns vector
+	 * Purpose:	Adds multiple columns to the tableColumns vector
 	 */
 	public DBValidator addColumn(BaseDataColumn[] columns) {
 		for(BaseDataColumn c : columns) 
@@ -50,7 +50,7 @@ public class DBValidator
 	
 	/*
 	 * Method Name: validateData
-	 * Purpose:		Validates data coming in against the tableColumns
+	 * Purpose:	Validates data coming in against the tableColumns
 	 */
 	public boolean validateData(Vector<String> data) {	// This data should be in the correct order
 		if(tableColumns.isEmpty())
@@ -78,7 +78,7 @@ public class DBValidator
 	
 	/*
 	 * Method Name: errorMsg
-	 * Purpose:		Shows error message and return false
+	 * Purpose:	Shows error message and return false
 	 */	
 	private static boolean errorMsg(String msg) {
 		JOptionPane.showMessageDialog(null, msg);
@@ -87,7 +87,7 @@ public class DBValidator
 	
 	/*
 	 * Method Name: checkSingleQuotation
-	 * Purpose:		Checks whether there is single quotation in the data. Returns true if there is one
+	 * Purpose:	Checks whether there is single quotation in the data. Returns true if there is one
 	 */	
 	public static boolean checkSingleQuotation(String data) {
 		for(int i = 0; i < data.length(); ++i)
@@ -100,7 +100,7 @@ public class DBValidator
 
 	/*
 	 * Method Name: isDataEmpty
-	 * Purpose:		Checks whether data is empty or not. Returns true if there is null or empty strings
+	 * Purpose:	Checks whether data is empty or not. Returns true if there is null or empty strings
 	 */
 	public static boolean isDataEmpty(Vector<String> data)	{
 		for(String d : data)
@@ -111,7 +111,7 @@ public class DBValidator
 	
 	/*
 	 * Method Name: isValidEmailAddress
-	 * Purpose:		Checks whether data is in correct email format
+	 * Purpose:	Checks whether data is in correct email format
 	 */
 	public static boolean isValidEmailAddress(String email) {
 		String ePattern = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$";
@@ -122,7 +122,7 @@ public class DBValidator
 	
 	/*
 	 * Method Name: isNumeric
-	 * Purpose:		Checks whether data only contains numbers
+	 * Purpose:	Checks whether data only contains numbers
 	 */
 	public static boolean isNumeric(String str) {  
 	  try {  
@@ -136,7 +136,7 @@ public class DBValidator
 	
 	/*
 	 * Class Name: 	BaseDataColumn
-	 * Purpose:		Base class for representing the tableColumns
+	 * Purpose:	Base class for representing the tableColumns
 	 */
 	public static abstract class BaseDataColumn {
 		private boolean exact; // this indicates whether the data has to be exactly the limit
@@ -181,7 +181,7 @@ public class DBValidator
 	
 	/*
 	 * Class Name: 	StringColumn
-	 * Purpose:		Represents a string column with restrictions
+	 * Purpose:	Represents a string column with restrictions
 	 */
 	public static class StringColumn extends BaseDataColumn {
 		private boolean isEmail;
@@ -211,7 +211,7 @@ public class DBValidator
 	
 	/*
 	 * Class Name: 	IntegerColumn
-	 * Purpose:		Represents an integer column with restrictions
+	 * Purpose:	Represents an integer column with restrictions
 	 */
 	public static class IntegerColumn extends BaseDataColumn {
 		public IntegerColumn(String colName,int limitLength) {
@@ -223,5 +223,5 @@ public class DBValidator
 			return super.validate(data) && isNumeric(data);
 		}
 	}		
-} // end inner class validate
+} 
 
