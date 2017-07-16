@@ -1,5 +1,5 @@
 /**
- * Program Name: 		AppDbContext.java
+ * Program Name: 			AppDbContext.java
  * Coder: 				Joseph Ryu for SEC01
  * Date: 				Jul 5, 2017
  * Purpose:				This class is used by the model objects. All queries are performed here.  
