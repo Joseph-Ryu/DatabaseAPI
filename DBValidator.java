@@ -1,9 +1,9 @@
 /**
- * Program Name: 		HelperClass.java
+ * Program Name: 			DBValidator.java
  * Coder: 				Joseph Ryu
  * Date: 				Jul 12, 2017
  * Purpose:				Used to validate whether an insertion can occur with database with current data.
- * 						This class can be used in either frontend to validate input or backend as well.
+ * 					This class can be used in either frontend to validate input or backend as well.
  */
 import javax.swing.JOptionPane;
 
@@ -172,6 +172,10 @@ public class DBValidator
 		
 		public void setExact(boolean b) {
 			exact = b;
+		}
+		
+		public boolean isExact() {
+			return exact;
 		}
 	}
 	
