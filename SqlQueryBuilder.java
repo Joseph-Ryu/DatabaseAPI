@@ -7,11 +7,11 @@
 import java.util.*;
 public class SqlQueryBuilder {
 	private String 			sqlQuery;
-	private List<String> 	tables; 
-	private List<String> 	columns;
-	private List<String> 	wheres;
-	private List<String> 	orders;
-	private List<String> 	values; 	// This will be used for INSERT and UPDATE only
+	private List<String> 		tables; 
+	private List<String> 		columns;
+	private List<String> 		wheres;
+	private List<String> 		orders;
+	private List<String> 		values; 	// This will be used for INSERT and UPDATE only
 	private QueryType 		queryType; 	// Indicates which CRUD
 	private boolean 		distinct;
 	
