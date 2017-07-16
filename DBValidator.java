@@ -6,8 +6,8 @@
  * 					This class can be used in either frontend to validate input or backend as well.
  */
 import javax.swing.JOptionPane;
-
 import java.util.*;
+
 public class DBValidator
 {	
 	private List<BaseDataColumn> tableColumns; // Represents the table that data will be validated against
