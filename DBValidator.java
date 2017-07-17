@@ -140,14 +140,14 @@ public class DBValidator
 	 */
 	public static abstract class BaseDataColumn {
 		private boolean exact; // this indicates whether the data has to be exactly the limit
-		private Type type;
-		private String colName;
-		private int lengthLimit;
+		private Type 	type;
+		private String 	colName;
+		private int 	lengthLimit;
 		
 		public BaseDataColumn(Type type, String colName, int lengthLimit) {
-			this.exact = false;
-			this.type = type;
-			this.colName = colName;
+			this.exact	 = false;
+			this.type	 = type;
+			this.colName 	 = colName;
 			this.lengthLimit = lengthLimit;
 		}
 		
